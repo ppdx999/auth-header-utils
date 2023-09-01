@@ -2,10 +2,16 @@
 
 Utilities for auth header.
 
+# Install
+
+```
+npm i auth-header-utils
+```
+
 # Usage
 
 ```js
-import { basic } from "./auth-header-utils";
+import { basic } from "auth-header-utils";
 
 basic.makeToken("username", "password") === "dXNlcm5hbWU6cGFzc3dvcmQ="
 
@@ -23,7 +29,7 @@ basic.parseHeader("Basic dXNlcm5hbWU6cGFzc3dvcmQ=") == ["username", "password"]
 ```
 
 ```js
-import {bearer} from "./auth-header-utils";
+import {bearer} from "auth-header-utils";
 
 bearer.isValid("Bearer xxxxxx") === true
 bearer.isValid("Bearre xxxxxx") === false
